@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+nbformat
+nbclient
+python-multipart
+pandas
+openpyxl

@@ -1,0 +1,178 @@
+/* Premium Minimal theme - soft shadows, deep-blue accent */
+:root{
+  --accent:#0b57a6; /* deep blue */
+  --muted:#6b7280;
+  --card-bg: #ffffff;
+  --page-bg: #f6f8fb;
+}
+
+.block-container {
+  padding-top: 2.0rem;
+  padding-bottom: 2.0rem;
+  background: var(--page-bg);
+}
+
+/* Card */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(11,87,166,0.08);
+  margin-bottom: 20px;
+}
+
+/* Header styles */
+.header {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.lead {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.button-primary {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  padding: 0.6rem 1rem !important;
+}
+
+/* Small meta */
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* JSON box */
+.json-box {
+  background: #0f1724;
+  color: #e6eef8;
+  padding:12px;
+  border-radius:8px;
+  font-family: monospace;
+  font-size:13px;
+}
+
+/* Table container minor tweak */
+.stDataFrame {
+  border-radius: 8px;
+}
+
+/* Make inputs slightly larger */
+input[type="text"], textarea {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Footer spacing */
+.footer {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* File uploader styling */
+.stFileUploader div[data-baseweb] {
+    color: #0b57a6 !important; 
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.stFileUploader label {
+    color: #0b57a6 !important; 
+}
+
+.stFileUploader button {
+    background-color: var(--accent) !important; 
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600;
+}
+
+.stFileUploader button:hover {
+    background-color: #094a8c !important;
+}
+
+/* Fix Streamlit overlay issue */
+.stApp::before {
+    background: transparent !important;
+    opacity: 1 !important;
+}
+
+/* Ensure main content is fully opaque */
+.main, .block-container, .stApp {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* ---------------------------- */
+/* DARK MODE FIX (PREMIUM)      */
+/* ---------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  
+  /* Main backgrounds */
+  .stApp, .main, .block-container {
+      background: #0d1117 !important; /* GitHub-style premium dark */
+      color: #ffffff !important;
+  }
+
+  /* Card styling for dark mode */
+  .card {
+      background: #161b22 !important;
+      color: #e6e6e6 !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.45) !important;
+  }
+
+  /* Header colors */
+  .header {
+      color: #58a6ff !important;
+  }
+  
+  .lead, .meta, label, p, span {
+      color: #9ba3b4 !important;
+  }
+
+  /* File uploader text fix */
+  .stFileUploader div[data-baseweb],
+  .stFileUploader label {
+      color: #58a6ff !important;
+  }
+
+  /* Inputs */
+  input[type="text"], textarea {
+      background: #0d1117 !important;
+      color: #ffffff !important;
+      border: 1px solid #30363d !important;
+  }
+
+  /* Buttons in dark mode */
+  .button-primary,
+  .stFileUploader button {
+      background-color: #1f6feb !important; 
+      color: white !important;
+  }
+
+  .button-primary:hover,
+  .stFileUploader button:hover {
+      background-color: #1158c7 !important;
+  }
+
+  /* JSON box */
+  .json-box {
+      background: #0d1117 !important;
+      color: #c9d1d9 !important;
+  }
+
+  /* Remove Streamlit’s dark overlay tint */
+  .stApp::before {
+      background: transparent !important;
+      opacity: 0 !important;
+  }
+}

@@ -95,3 +95,4 @@ Once the app is running, open a browser and navigate to http://localhost:8501 to
 - **Weighted Average**: Calculate the weighted average of multiple columns with specified weights.
 
 - **Aggregate Function**: Apply aggregation functions such as sum, mean, median, min, or max to selected columns.
+## Deployment: https://mufgcasestudy1team4.streamlit.app/
